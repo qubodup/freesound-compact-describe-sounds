@@ -312,7 +312,12 @@ td.fut-description textarea {
 td.fut-pack button{
     font-size: 85%;
 }
-
+/* fix solo sound */
+@media (min-width: 992px) {
+    .offset-lg-2 {
+margin: auto;
+    }
+}
 `);
 
     const formBlocks = Array.from(document.querySelectorAll('div[id^="form-"]')).slice(0, 10);
