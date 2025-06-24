@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Freesound Compact Describe Sounds
 // @namespace    https://qubodup.github.io/
-// @version      1.0
+// @version      2025-06-25
 // @description  Display Freesound description blocks in a table layout
 // @author       qubodup
 // @match        https://freesound.org/home/describe/sounds/*
@@ -325,10 +325,12 @@ td.fut-pack button{
     mainContent.style.setProperty('flex', 'none', 'important');
     mainContent.style.setProperty('width', '100%', 'important');
     mainContent.style.setProperty('max-width', 'none', 'important');
-    navBar.style.setProperty('display', 'block', 'important');
-    navBar.style.setProperty('flex', 'none', 'important');
-    navBar.style.setProperty('width', '100%', 'important');
-    navBar.style.setProperty('max-width', 'none', 'important');
+    if (navBar) {
+        navBar.style.setProperty('display', 'block', 'important');
+        navBar.style.setProperty('flex', 'none', 'important');
+        navBar.style.setProperty('width', '100%', 'important');
+        navBar.style.setProperty('max-width', 'none', 'important');
+    }
     // force fullwidth ... end
 
     formBlocks.forEach(form => {
